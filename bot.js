@@ -12,10 +12,31 @@ client.on('message', msg => {
   }
 });
 
+client.on('ready', function(){
+    var ms = 60000 ;
+    var setGame = ['!.help | !.invite'];
+    var i = -1;
+    var j = 0;
+    setInterval(function (){
+        if( i == -1 ){
+            j = 1;
+        }
+        if( i == (setGame.length)-1 ){
+            j = -1;
+        }
+        i = i+j;
+        client.user.setGame(setGame[By ebra7im],`http://www.twitch.tv/GamerzBot`);
+    }, ms);
+
+});
+
+client.on('message', msg => {
+  if (msg.content === '!.help') {
+    msg.reply('تم ارسال الرسالة في الخاص ✅');
+  }
+}); 
 
 
 
 
-
-
-client.login('token');
+client.login('NDQ5NDIxNjM4MTk5NjcyODUy.DenqWw.m00mTMpItH-4RXDezHyhyYt_GJs');
