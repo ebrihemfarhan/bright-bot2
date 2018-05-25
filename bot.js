@@ -9,11 +9,7 @@ client.on('ready', () => {
 client.on('message', msg => {
   if (msg.content === 'ping') {
     msg.reply('Pong!');
-   
-client.on('message', msg => {
-  if (msg.content === '!.help') {
-    msg.reply('تم ارسال الرسالة في الخاص ✅');
-    
+ 
   }
 });
 
