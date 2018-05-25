@@ -9,6 +9,11 @@ client.on('ready', () => {
 client.on('message', msg => {
   if (msg.content === 'ping') {
     msg.reply('Pong!');
+   
+client.on('message', msg => {
+  if (msg.content === '!.help') {
+    msg.reply('تم ارسال الرسالة في الخاص ✅');
+    
   }
 });
 
@@ -29,12 +34,6 @@ client.on('ready', function(){
     }, ms);
 
 });
-
-client.on('message', msg => {
-  if (msg.content === '!.help') {
-    msg.reply('تم ارسال الرسالة في الخاص ✅');
-  }
-}); 
 
 
 
